@@ -8,6 +8,6 @@ export default defineConfig({
   },
   plugins: [react()],
   server: {
-    port: 3000, // Change this to the port you want
+    port: process.env.PORT || 3000, // Use environment variable PORT or default to 3000
   },
 });
