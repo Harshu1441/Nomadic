@@ -7,7 +7,4 @@ export default defineConfig({
     outDir: "build",
   },
   plugins: [react()],
-  server: {
-    port: process.env.PORT || 3000, // Use environment variable PORT or default to 3000
-  },
 });
