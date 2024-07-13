@@ -13,8 +13,7 @@ import TripPage from "./pages/trip-page";
 import BrowseTrip from './pages/browse-trip';
 import TripPlan from "./pages/trip.plan";
 import AboutUs from "./pages/about-us";
-import AdminHome from "./Admin/AdminHome/AdminHome";
-import AdminLogin from "./Admin/AdminLogin";
+
 function App() {
   const action = useNavigationType();
   const location = useLocation();
@@ -59,15 +58,6 @@ function App() {
         title = "";
         metaDescription = "";
         break;
-      case "/admin":
-       title = "";
-      metaDescription = "";
-      break;
-      case "/adminhome":
-        title = "";
-       metaDescription = "";
-       break; 
-
     }
 
     if (title) {
@@ -94,9 +84,6 @@ function App() {
       <Route path="/browse-trip" element={<BrowseTrip />} />
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/trip-plan" element={<TripPlan />} />
-      <Route path="/adminhome" element={<AdminHome />} />
-      <Route path="/admin" element={<AdminLogin />} />
-
     </Routes>
   );
 }
