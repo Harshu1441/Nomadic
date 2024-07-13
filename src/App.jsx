@@ -13,7 +13,10 @@ import TripPage from "./pages/trip-page";
 import BrowseTrip from './pages/browse-trip';
 import TripPlan from "./pages/trip.plan";
 import AboutUs from "./pages/about-us";
-
+import Tours from "./Admin/AdminPages/Tours";
+import Users from "./Admin/AdminPages/Users";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
 function App() {
   const action = useNavigationType();
   const location = useLocation();
@@ -58,6 +61,14 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/admin":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/users":
+        title = "";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -84,6 +95,11 @@ function App() {
       <Route path="/browse-trip" element={<BrowseTrip />} />
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/trip-plan" element={<TripPlan />} />
+      <Route path="/users" element={<Users />} />
+      <Route path="/admin" element={<Tours />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+
     </Routes>
   );
 }

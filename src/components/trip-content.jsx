@@ -2,6 +2,9 @@ import GroupComponent2 from "./group-component2";
 import PropTypes from "prop-types";
 
 const TripContent = ({ className = "" }) => {
+  const handleCall=()=>{
+    alert("For Contact Us To Call Now +91 9418011200");
+  }
   return (
     <section
       className={`w-[1423px] flex flex-row items-start justify-end py-0 px-[65px] box-border max-w-full mq750:pl-8 mq750:pr-8 mq750:box-border ${className}`}
@@ -61,7 +64,7 @@ const TripContent = ({ className = "" }) => {
             </div>
             <div className="w-[286px] flex flex-row items-start justify-start py-0 px-px box-border">
               <div className="flex-1 flex flex-col items-start justify-start gap-[20px]">
-                <button className="cursor-pointer [border:none] py-[18px] pr-[19px] pl-5 bg-gold-100 self-stretch rounded-lg flex flex-row items-start justify-start whitespace-nowrap hover:bg-goldenrod-100">
+                <button onClick={handleCall} className="cursor-pointer [border:none] py-[18px] pr-[19px] pl-5 bg-gold-100 self-stretch rounded-lg flex flex-row items-start justify-start whitespace-nowrap hover:bg-goldenrod-100">
                   <div className="h-[77px] w-[284px] relative rounded-lg bg-gold-100 hidden" />
                   <div className="h-[41px] flex-1 relative text-xl leading-[140%] font-semibold font-montserrat text-black text-center flex items-center justify-center z-[1]">
                     Call Us to Book
